@@ -4,12 +4,14 @@ import src.entidades.Jogador;
 import src.repositorios.ListaJogadores;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         // Criar 11 jogadores (vou colocar 2 para testar por enquanto):
 
@@ -21,8 +23,8 @@ public class Main {
             String nome = scanner.nextLine();
             System.out.print("Digite o apelido do jogador: ");
             String apelido = scanner.nextLine();
-            System.out.print("Digite a data de nascimento do jogador no formato AAAA-MM-DD: ");
-            LocalDate dataNascimento = LocalDate.parse(scanner.next());
+            System.out.print("Digite a data de nascimento do jogador no formato DD/MM/AAAA: ");
+            LocalDate dataNascimento = LocalDate.parse(scanner.next(), formatter);
             System.out.print("Digite o número do jogador: ");
             int numero = scanner.nextInt();
             System.out.print("Digite a posição do jogador: ");
@@ -63,7 +65,7 @@ public class Main {
                             jogador.getNumero() + " - " +
                             jogador.getNome() + " (" +
                             jogador.getApelido() + ") - " +
-                            jogador.getDataNascimento() + ". " +
+                            jogador.getDataNascimento().format(formatter) + ". " +
                             condicao);
 
         }
