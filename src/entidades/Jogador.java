@@ -35,4 +35,44 @@ public class Jogador {
         return this.cartoes >= 3;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+
+    public int getQualidade() {
+        return qualidade;
+    }
+
+    public int getCartoes() {
+        return cartoes;
+    }
+
+    public Boolean getSuspenso() {
+        return suspenso;
+    }
+
+    public void setSuspenso(Boolean suspenso){
+        this.suspenso = suspenso;
+    }
+
 }
