@@ -1,6 +1,7 @@
 package src;
 
 import src.entidades.Jogador;
+import src.repositorios.ListaJogadores;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -31,6 +32,9 @@ public class Main {
             Boolean suspenso = false;
 
             Jogador jogador = new Jogador(id, nome, apelido, dataNascimento, numero, posicao, qualidade, cartoes, suspenso);
+
+            ListaJogadores.adicionarJogador(jogador);
+
         }
 
         // Exibir o time:

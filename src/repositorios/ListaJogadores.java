@@ -9,4 +9,8 @@ public class ListaJogadores {
 
     public static List<Jogador> jogadores = new ArrayList<>();
 
+    public static void adicionarJogador(Jogador jogador) {
+        jogadores.add(jogador);
+    }
+
 }
