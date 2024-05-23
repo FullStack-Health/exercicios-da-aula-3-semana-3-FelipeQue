@@ -1,4 +1,4 @@
-package entidades;
+package src.entidades;
 
 import java.util.Date;
 
@@ -16,25 +16,26 @@ public class Jogador {
     private Boolean suspenso;
 
     // Construtor
-
-    public Jogador Jogador(){}; // Construtor vazio
-
-    public Jogador Jogador(int id, String nome, String apelido, Date dataNascimento, int numero, String posicao, int qualidade, int cartoes, Boolean suspenso){
-        this.id = id;
-        this.nome = nome;
-        this.apelido = apelido;
-        this.dataNascimento = dataNascimento;
-        this.numero = numero;
-        this.posicao = posicao;
-        this.qualidade = qualidade;
-        this.cartoes = cartoes;
-        this.suspenso = suspenso;
-    }
-
-    public Boolean verificarCondicaoDeJogo(){
-        if (cartoes >= 3){
-            suspenso = true;
-        }
-    }
+//
+//    public Jogador Jogador(){}; // Construtor vazio
+//
+//    public Jogador Jogador(int id, String nome, String apelido, Date dataNascimento, int numero, String posicao, int qualidade, int cartoes, Boolean suspenso){
+//        this.id = id;
+//        this.nome = nome;
+//        this.apelido = apelido;
+//        this.dataNascimento = dataNascimento;
+//        this.numero = numero;
+//        this.posicao = posicao;
+//        this.qualidade = qualidade;
+//        this.cartoes = cartoes;
+//        this.suspenso = suspenso;
+//    }
+//
+//    public Boolean verificarCondicaoDeJogo(){
+//        if (cartoes >= 3){
+//            suspenso = true;
+//        }
+//        return suspenso;
+//    }
 
 }
