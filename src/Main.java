@@ -16,10 +16,11 @@ public class Main {
         for (int i = 0; i < 2; i++) {
             System.out.print("Digite o id do jogador (int): ");
             int id = scanner.nextInt();
+            scanner.nextLine();
             System.out.print("Digite o nome do jogador: ");
-            String nome = scanner.next();
+            String nome = scanner.nextLine();
             System.out.print("Digite o apelido do jogador: ");
-            String apelido = scanner.next();
+            String apelido = scanner.nextLine();
             System.out.print("Digite a data de nascimento do jogador no formato AAAA-MM-DD: ");
             LocalDate dataNascimento = LocalDate.parse(scanner.next());
             System.out.print("Digite o número do jogador: ");
@@ -47,22 +48,23 @@ public class Main {
         System.out.println(" ");
 
         for (Jogador jogador : ListaJogadores.jogadores) {
-            System.out.println("ID: " + jogador.getId());
-            System.out.println("Nome: " + jogador.getNome());
-            System.out.println("Apelido: " + jogador.getApelido());
-            System.out.println("Data de nascimento: " + jogador.getDataNascimento());
-            System.out.println("Número: " + jogador.getNumero());
-            System.out.println("Posição: " + jogador.getPosicao());
-            System.out.println("Qualidade: " + jogador.getQualidade());
-            System.out.println("Cartões: " + jogador.getCartoes());
+
+            String condicao;
 
             jogador.setSuspenso(jogador.verificarCondicaoDeJogo());
             if (jogador.getSuspenso()) {
-                System.out.println("Condição: Suspenso.");
+                condicao = "Condição: Suspenso.";
             } else {
-                System.out.println("Condição: Tá pra jogo!");
+                condicao = "Condição: Tá pra jogo!";
             }
-            System.out.println("---");
+
+            System.out.println(
+                    jogador.getPosicao() + ": " +
+                            jogador.getNumero() + " - " +
+                            jogador.getNome() + " (" +
+                            jogador.getApelido() + ") - " +
+                            jogador.getDataNascimento() + ". " +
+                            condicao);
 
         }
     }
